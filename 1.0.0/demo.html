@@ -62,7 +62,7 @@
         <h1 style="line-height:2em;font-size:2em;">jz弹窗插件 demo v1.0.0 （一个文件 12KB）</h1>
         <p class="pa">
             <a href="//jz.netnr.com">Powered by jz.netnr.com</a>
-            <a href="https://github.com/netnr/jz">GitHub</a>
+            <a href="https://github.com/netnr/jz" style="color:blue;">GitHub</a>
         </p>
         <div id="divCode">
             <pre id="pre1">
@@ -238,13 +238,15 @@ j.tip({
 
 <script src="jz-1.0.0.min.js"></script>
 <script>
-    //事件委托
-    j("#divCode").click(function (e) {
-        e = e || window.event;
-        var target = e.target || e.srcElement;
-        if (target.nodeName == "INPUT") {
-            eval(j('#' + target.id.replace('btn', 'pre'))[0].innerHTML);
-        }
-    })
-    j("#select41").change(function () { eval(j("#pre41a")[0].innerHTML); })
+    setTimeout(function () {
+        //事件委托
+        j("#divCode").click(function (e) {
+            e = e || window.event;
+            var target = e.target || e.srcElement;
+            if (target.nodeName == "INPUT") {
+                eval(j('#' + target.id.replace('btn', 'pre'))[0].innerHTML);
+            }
+        })
+        j("#select41").change(function () { eval(j("#pre41a")[0].innerHTML); })
+    }, 1000 * 2)
 </script>
