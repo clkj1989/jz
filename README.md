@@ -14,4 +14,4 @@
 <script src="jz-1.0.0.min.js"></script>
 ```
 # 示例
-详细使用方法请参阅[使用教程](//www.netnr.com/jz/1.0.0/demo.html)
+详细使用方法请参阅[使用教程](//www.netnr.com/scripts/jz/1.0.0/demo.html)
