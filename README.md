@@ -15,7 +15,7 @@
 ```
 
 # 示例
-详细使用方法请参阅[使用教程](//www.netnr.com/scripts/jz/1.0.0/demo.html "具体使用示例")
+详细使用方法请参阅[www.netnr.com/scripts/jz/1.0.0/demo.html](//www.netnr.com/scripts/jz/1.0.0/demo.html "具体使用示例")
 
 # 主页
-[官方站点](//www.netnr.com/jz "官方站点")
+[www.netnr.com/jz](//www.netnr.com/jz "官方站点")
