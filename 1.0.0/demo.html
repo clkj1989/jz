@@ -32,18 +32,28 @@
             margin: 30px auto;
         }
 
-            .divJz .pa a {
+            .divJz .pa {
                 float: left;
-                padding: 3px 5px;
-                margin-right: 25px;
-                text-decoration: none;
-                border: 1px solid transparent;
+                width: 100%;
             }
 
-                .divJz .pa a:hover {
-                    color: #099;
-                    border-bottom-color: #28a745;
+                .divJz .pa a {
+                    float: left;
+                    padding: 3px 5px;
+                    font-size: 1.4em;
+                    margin-right: 25px;
+                    text-decoration: none;
+                    border: 1px solid transparent;
                 }
+
+                    .divJz .pa a:hover {
+                        color: #099;
+                        border-bottom-color: #28a745;
+                    }
+
+        #divCode {
+            clear: both;
+        }
 
         pre {
             color: #333;
@@ -59,10 +69,10 @@
 </head>
 <body>
     <div class="divJz">
-        <h1 style="line-height:2em;font-size:2em;">jz弹窗插件 demo v1.0.0 （一个文件）</h1>
+        <h1 style="line-height:2em;font-size:2em;">jz弹窗插件 demo v1.0.0 （一个文件，约13KB）</h1>
         <p class="pa">
-            <a href="//jz.netnr.com">Powered by jz.netnr.com</a>
-            <a href="https://github.com/netnr/jz" style="color:blue;">GitHub</a>
+            <a href="https://github.com/netnr/jz" style="color:#28a745;">GitHub</a>
+            <a href="https://gitee.com/netnr/jz" style="color:#fe7300;">Gitee</a>
         </p>
         <div id="divCode">
             <pre id="pre1">
@@ -160,7 +170,7 @@ j.iframe({
             <pre id="pre6a">
 j.iframe({
     title: "新窗口",   //指定标题
-    src: "//jz.netnr.com",
+    src: "//segmentfault.com",
     width: 440, //指定宽度 
     height: 600,    //指定高度
     scrolling: true,    //滚动条自动
