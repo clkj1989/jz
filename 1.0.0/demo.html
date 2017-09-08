@@ -59,7 +59,7 @@
 </head>
 <body>
     <div class="divJz">
-        <h1 style="line-height:2em;font-size:2em;">jz弹窗插件 demo v1.0.0 （一个文件 12KB）</h1>
+        <h1 style="line-height:2em;font-size:2em;">jz弹窗插件 demo v1.0.0 （一个文件）</h1>
         <p class="pa">
             <a href="//jz.netnr.com">Powered by jz.netnr.com</a>
             <a href="https://github.com/netnr/jz" style="color:blue;">GitHub</a>
@@ -160,8 +160,8 @@ j.iframe({
             <pre id="pre6a">
 j.iframe({
     title: "新窗口",   //指定标题
-    src: "http://wap.ip138.com/",
-    width: 400, //指定宽度 
+    src: "//jz.netnr.com",
+    width: 440, //指定宽度 
     height: 600,    //指定高度
     scrolling: true,    //滚动条自动
     mask: true,  //遮罩层
@@ -238,15 +238,13 @@ j.tip({
 
 <script src="jz-1.0.0.min.js"></script>
 <script>
-    setTimeout(function () {
-        //事件委托
-        j("#divCode").click(function (e) {
-            e = e || window.event;
-            var target = e.target || e.srcElement;
-            if (target.nodeName == "INPUT") {
-                eval(j('#' + target.id.replace('btn', 'pre'))[0].innerHTML);
-            }
-        })
-        j("#select41").change(function () { eval(j("#pre41a")[0].innerHTML); })
-    }, 1000 * 2)
+    //事件委托
+    j("#divCode").click(function (e) {
+        e = e || window.event;
+        var target = e.target || e.srcElement;
+        if (target.nodeName == "INPUT") {
+            eval(j('#' + target.id.replace('btn', 'pre'))[0].innerHTML);
+        }
+    })
+    j("#select41").change(function () { eval(j("#pre41a")[0].innerHTML); })
 </script>

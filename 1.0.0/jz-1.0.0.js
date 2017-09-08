@@ -70,6 +70,22 @@
         //宽高、边距、滚动条间距、内容宽高
         px: function () {
             return jz.px(this[0]);
+        },
+        //父级节点
+        parent: function () {
+            var match = [];
+            jz.each(this, function () {
+                var m = jz.dir(this, "parentNode");
+                m.length && match.push(m[0]);
+            });
+            return new jz.fn.init(match);
+        },
+        //移除
+        remove: function () {
+            jz.each(this, function () {
+                var pt = jz(this).parent();
+                pt.length && pt[0].removeChild(this);
+            });
         }
     };
 
@@ -117,14 +133,14 @@
 
     //添加处理事件
     jz.each(("blur focus focusin focusout load resize scroll unload click dblclick "
-           + "mousedown mouseup mousemove mouseover mouseout mouseenter mouseleave "
-           + "change select submit keydown keypress keyup error contextmenu").split(" ")
-           , function (i, name) {
-               jz.fn[name] = function (callback) {
-                   jz.each(this, function () { jz.on(name, callback, this); });
-                   return this;
-               }
-           });
+        + "mousedown mouseup mousemove mouseover mouseout mouseenter mouseleave "
+        + "change select submit keydown keypress keyup error contextmenu").split(" ")
+        , function (i, name) {
+            jz.fn[name] = function (callback) {
+                jz.each(this, function () { jz.on(name, callback, this); });
+                return this;
+            }
+        });
 
     //event
     jz.event = function (e) { return e || window.event };
@@ -145,6 +161,16 @@
         s.styleSheet ? s.styleSheet.cssText = css : s.innerHTML = css;
         document.getElementsByTagName("HEAD")[0].appendChild(s);
     };
+
+    //检索一个节点某个方向的节点 dir可选值：parentNode nextSibling previousSibling
+    jz.dir = function (t, dir) {
+        var match = [], cur = t[dir];
+        while (cur && cur.nodeType != 9) {
+            cur.nodeType == 1 && match.push(cur);
+            cur = cur[dir];
+        }
+        return match;
+    }
 
     //宽高、边距、滚动条间距、内容宽高
     jz.px = function (element) {
@@ -328,14 +354,9 @@
         remove: function (id, time) {
             function re(id) {
                 if (id != null && id != "") {
-                    var elem = document.getElementById(id), elemMask = document.getElementById(id + "mask");
-                    if (elem || elemMask) {
-                        try {
-                            elem["fn"] = null;
-                            elem.parentElement.removeChild(elem);
-                            elemMask.parentElement.removeChild(elemMask);
-                        } catch (e) { }
-                    }
+                    id = "#" + id;
+                    jz(id).remove();
+                    jz(id + "mask").remove();
                 }
             }
             if (typeof time == "number") { setTimeout(function () { re(id) }, time * 1000) } else { re(id) }
@@ -362,8 +383,8 @@
                 //删除
                 remove: function () {
                     msg && (msg["fn"] = null);
-                    msg && msg.parentElement.removeChild(msg);
-                    mask && mask.parentElement.removeChild(mask);
+                    jz(msg).remove();
+                    jz(mask).remove();
                 }
             };
         },
@@ -405,8 +426,8 @@
         if (obj.title != undefined) {
             //头部包
             header = jz.art.header(),
-            //标题
-            title = jz.art.title(obj);
+                //标题
+                title = jz.art.title(obj);
             //显示关闭按钮
             if (obj.close != false) {
                 var close = jz.art.close();
@@ -486,7 +507,7 @@
             if (window.addEventListener) {
                 window.addEventListener("resize", function () { jz.art.center(msg) }, false);
             } else { window.attachEvent("onresize", function () { jz.art.center(msg) }); }
-        }        
+        }
         jz.art.fn(msg, mask, header, body, iframe, footer);
         return msg;
     };
@@ -547,8 +568,8 @@
     jz.tip = function (obj) {
         //提示目标
         var tar = jz(obj.target)[0],
-        //提示包
-        tip = jz.art.wrap(obj), id = tip.id;
+            //提示包
+            tip = jz.art.wrap(obj), id = tip.id;
         //弹窗堆叠顺序
         tip.style.zIndex = jz.art.zindex;
         //内容
