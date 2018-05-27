@@ -22,6 +22,3 @@
 - [v1.0.1](https://www.netnr.com/scripts/jz/1.0.1/demo.html)（2018-02-23）
 
 - [v1.0.0](https://www.netnr.com/scripts/jz/1.0.0/demo.html)（2017-07-06）
-
-----
-PoweredBy [netnr.com](https://www.netnr.com)

@@ -6,32 +6,48 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
-    <link href="/favicon.svg" rel="Shortcut Icon" type="image/svg" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link href="favicon.svg" rel="Shortcut Icon" type="image/svg" />
 
-    <title>jz弹窗插件 NET牛人</title>
+    <title>jz弹窗插件 netnr</title>
 
-    <meta name="keywords" content="netnr,NET牛人,jz弹窗插件" />
-    <meta name="description" content="netnr,NET牛人,jz弹窗插件" />
+    <meta name="keywords" content="jz,jz弹窗插件,netnr,NET牛人" />
+    <meta name="description" content="jz,jz弹窗插件,netnr,NET牛人" />
+
+    <link href="https://lib.baomitu.com/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
 
     <style>
         .bc {
             color: #333;
             margin: auto;
             max-width: 420px;
-            font-family: "Microsoft YaHei",sans-serif;
+            font-size: 1.2em;
         }
 
-            .bc h1 {
-                margin: 0;
-                padding: 0;
-                margin-top: 35px;
-                font-size: 1.5em;
+        /*footer*/
+        .footer {
+            width: 100%;
+            display: block;
+            margin-top: 70px;
+            padding: 30px 0 0;
+            text-align: center;
+            border-top: 1px solid #ddd;
+        }
+
+            .footer .logo {
+                user-select: none;
+                animation: myrotate 60s infinite;
             }
 
-            .bc ul li {
-                line-height: 2em;
+        @keyframes myrotate {
+            from {
+                transform: rotate(0deg);
             }
+
+            to {
+                transform: rotate(360deg);
+            }
+        }
     </style>
 </head>
 <body>
@@ -56,16 +72,20 @@
                 <a href="https://gitee.com/netnr/jz" style="color:#fe7300;">Gitee</a>
             </b>
         </p>
-        
+
         <h1>版本（Demo）</h1>
         <ul>
             <li><a href="//www.netnr.com/scripts/jz/1.0.1/demo.html">v1.0.1</a>（2018-02-23）</li>
             <li><a href="//www.netnr.com/scripts/jz/1.0.0/demo.html">v1.0.0</a>（2017-07-06）</li>
         </ul>
 
-        <hr />
-        <p>PoweredBy <a href="https://www.netnr.com">netnr.com</a></p>
     </div>
+
+    <!--页脚-->
+    <footer class="footer">
+        <p><img src="favicon.svg" class="logo" /></p>
+        <p>© 2018 <a href="https://www.netnr.com">netnr</a></p>
+    </footer>
 
 </body>
 </html>
