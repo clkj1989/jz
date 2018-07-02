@@ -1,24 +1,31 @@
-# JZ
+# Jz JavaScript Popup
+
 > 一个轻量、简单的弹窗插件
 
+----------
+### 功能（Function）
 
-# 功能列表（Function）
-> `j.msg` （ 提示消息，仅仅是内容 ）
+- `jz.msg` （ 提示消息，仅仅是内容 ）
 
-> `j.alert` （ 提示消息，类似系统提示 alert ）
+- `jz.alert` （ 提示消息，类似系统提示 alert ）
 
-> `j.confirm` （ 询问提示，类似系统提示 confirm ）
+- `jz.confirm` （ 询问提示，类似系统提示 confirm ）
 
-> `j.iframe` （ 弹出 iframe ）
+- `jz.iframe` （ 弹出 iframe ）
 
-> `j.tip` （ 气泡提示 ）
+- `jz.tip` （ 气泡提示 ）
 
+----------
+### 托管（Git）
 
-# 托管（Git）
-[GitHub](https://github.com/netnr/jz) [Gitee](https://gitee.com/netnr/jz)
+[GitHub](https://github.com/netnr/jz)
+[Gitee](https://gitee.com/netnr/jz)
 
+----------
+### 版本（Demo）
 
-# 版本（Demo）
-- [v1.0.1](https://www.netnr.com/scripts/jz/1.0.1/demo.html)（2018-02-23）
+- [v2.0.0](https://jz.netnr.com/2.0.0/demo.html)（2018-06-29）
 
-- [v1.0.0](https://www.netnr.com/scripts/jz/1.0.0/demo.html)（2017-07-06）
+- [v1.0.1](https://jz.netnr.com/1.0.1/demo.html)（2018-02-23）
+
+- [v1.0.0](https://jz.netnr.com/1.0.0/demo.html)（2017-07-06）
