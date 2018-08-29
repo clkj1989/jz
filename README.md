@@ -24,8 +24,8 @@
 ----------
 ### 版本（Demo）
 
-- [v2.0.0](https://jz.netnr.com/2.0.0/demo.html)（2018-06-29）
+- [v2.0.0](https://jz.netnr.com/2.0.0/demo)（2018-06-29）
 
-- [v1.0.1](https://jz.netnr.com/1.0.1/demo.html)（2018-02-23）
+- [v1.0.1](https://jz.netnr.com/1.0.1/demo)（2018-02-23）
 
-- [v1.0.0](https://jz.netnr.com/1.0.0/demo.html)（2017-07-06）
+- [v1.0.0](https://jz.netnr.com/1.0.0/demo)（2017-07-06）
